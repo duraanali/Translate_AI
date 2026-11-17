@@ -1,0 +1,36 @@
+{
+  "name": "translation",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": "prisma generate",
+    "start": "prisma migrate deploy && node server.js",
+    "postinstall": "prisma generate",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "openai": "^7.57.0",
+    "pg": "^8.23.0",
+    "prisma": "^7.9.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.21.0",
+    "nodemon": "^3.1.14"
+  }
+}
